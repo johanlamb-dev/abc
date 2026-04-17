@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>johan.lambert — portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor cursor-dot" id="cursorDot"></div>
+  <div class="cursor cursor-ring" id="cursorRing"></div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#" class="logo">johan.lambert</a>
+      <nav class="header-nav">
+        <a href="#projets" class="nav-link">projets</a>
+        <a href="#" class="nav-link" id="openAbout">à propos</a>
+        <a href="#" class="nav-link" id="openContact">contact</a>
+      </nav>
+      <button class="burger" id="burgerBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#projets" class="mob-link" id="mobileProjet">projets</a>
+      <a href="#" class="mob-link" id="mobileAbout">à propos</a>
+      <a href="#" class="mob-link" id="mobileContact">contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-blob blob1"></div>
+    <div class="hero-blob blob2"></div>
+    <div class="hero-blob blob3"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow"><span class="eyebrow-dot"></span> développeur web</p>
+      <h1 class="hero-title">je <span class="accent-cyan">crée</span><br>des trucs<br><span
+          class="accent-purple">cool.</span></h1>
+      <p class="hero-sub">apps, jeux, sites — fait avec passion &amp; curiosité.</p>
+      <a href="#projets" class="cta-btn">
+        <span>voir les projets</span>
+        <i data-lucide="arrow-down" class="icon-inline"></i>
+      </a>
+    </div>
+    <div class="hero-deco">
+      <div class="deco-card dc1"></div>
+      <div class="deco-card dc2"></div>
+      <div class="deco-card dc3"></div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">14+</span>
+        <span class="stat-label">projets</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">4</span>
+        <span class="stat-label">catégories</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- PROJETS -->
+  <section class="projets" id="projets">
+    <div class="section-header">
+      <span class="section-label"><i data-lucide="sparkles" class="icon-label"></i> mes projets</span>
+      <div class="section-line"></div>
+    </div>
+
+    <!-- CATEGORY TABS -->
+    <div class="cat-tabs">
+      <button class="cat-tab active" data-filter="all">
+        <i data-lucide="layout-grid" style="width:13px;height:13px"></i> Tout
+      </button>
+      <button class="cat-tab" data-filter="cat-social">
+        <i data-lucide="message-circle" style="width:13px;height:13px"></i> Social
+      </button>
+      <button class="cat-tab" data-filter="cat-web">
+        <i data-lucide="globe" style="width:13px;height:13px"></i> Apps Web
+      </button>
+      <button class="cat-tab" data-filter="cat-jeux">
+        <i data-lucide="gamepad-2" style="width:13px;height:13px"></i> Jeux
+      </button>
+      <button class="cat-tab" data-filter="cat-sites">
+        <i data-lucide="layout-panel-left" style="width:13px;height:13px"></i> Sites
+      </button>
+    </div>
+
+    <!-- CATÉGORIE 1 : Apps sociales -->
+    <div class="category" id="cat-social">
+      <div class="cat-header">
+        <span class="cat-icon"><i data-lucide="message-circle"></i></span>
+        <h2 class="cat-title">Apps sociales</h2>
+        <span class="cat-count">3</span>
+      </div>
+      <div class="cards-grid">
+        <div class="proj-card" data-url="https://helyx.netlify.app/" data-title="Helyx"
+          data-desc="L'entraide scolaire sous un nouveau jour.">
+          <div class="card-img-wrap">
+            <iframe src="https://helyx.netlify.app/" scrolling="no" loading="lazy" tabindex="-1"></iframe>
+            <div class="card-overlay"></div>
+            <div class="card-shimmer"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag" style="background:#00e4fb22;color:#00bcd4">social</span>
+            <h3 class="card-name">Helyx</h3>
+            <a class="card-arrow" href="#" data-url="https://helyx.netlify.app/" data-title="Helyx"
+              data-desc="L'entraide scolaire sous un nouveau jour.">voir <i data-lucide="arrow-right"
+                class="icon-arrow"></i></a>
+          </div>
+        </div>
+        <div class="proj-card" data-url="https://post2-talk.vercel.app/" data-title="Post2Talk"
+          data-desc="Parle, partage, connecte.">
+          <div class="card-img-wrap">
+            <iframe src="https://post2-talk.vercel.app/" scrolling="no" loading="lazy" tabindex="-1"></iframe>
+            <div class="card-overlay"></div>
+            <div class="card-shimmer"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag" style="background:#00e4fb22;color:#00bcd4">social</span>
+            <h3 class="card-name">Post2Talk</h3>
+            <a class="card-arrow" href="#" data-url="https://post2-talk.vercel.app/" data-title="Post2Talk"
+              data-desc="Parle, partage, connecte.">voir <i data-lucide="arrow-right" class="icon-arrow"></i></a>
+          </div>
+        </div>
+        <div class="proj-card" data-url="https://syncupcrew.netlify.app/" data-title="SyncUp Crew"
+          data-desc="Organisez-vous entre amis.">
+          <div class="card-img-wrap">
+            <iframe src="https://syncupcrew.netlify.app/" scrolling="no" loading="lazy" tabindex="-1"></iframe>
+            <div class="card-overlay"></div>
+            <div class="card-shimmer"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag" style="background:#00e4fb22;color:#00bcd4">social</span>
+            <h3 class="card-name">SyncUp</h3>
+            <a class="card-arrow" href="#" data-url="https://syncupcrew.netlify.app/" data-title="SyncUp Crew"
+              data-desc="Organisez-vous entre amis.">voir <i data-lucide="arrow-right" class="icon-arrow"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATÉGORIE 2 : Apps Web -->
+    <div class="category" id="cat-web">
+      <div class="cat-header">
+        <span class="cat-icon"><i data-lucide="globe"></i></span>
+        <h2 class="cat-title">Apps Web</h2>
+        <span class="cat-count">3</span>
+      </div>
+      <div class="cards-grid">
+        <div class="proj-card" data-url="https://firecamp-official.github.io/FrigoSmart/" data-title="FrigoSmart"
+          data-desc="Gérez votre frigo intelligemment.">
+          <div class="card-img-wrap">
+            <iframe src="https://firecamp-official.github.io/FrigoSmart/" scrolling="no" loading="lazy"
+              tabindex="-1"></iframe>
+            <div class="card-overlay"></div>
+            <div class="card-shimmer"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag" style="background:#6bfbce22;color:#1db88a">web app</span>
+            <h3 class="card-name">FrigoSmart</h3>
+            <a class="card-arrow" href="#" data-url="https://firecamp-official.github.io/FrigoSmart/"
+              data-title="FrigoSmart" data-desc="Gérez votre frigo intelligemment.">voir <i data-lucide="arrow-right"
+                class="icon-arrow"></i></a>
+          </div>
+        </div>
+        <div class="proj-card" data-url="https://firecamp-official.github.io/Editeur-cours/"
+          data-title="Éditeur de Cours" data-desc="Crée et édite tes cours facilement.">
+          <div class="card-img-wrap">
+            <iframe src="https://firecamp-official.github.io/Editeur-cours/" scrolling="no" loading="lazy"
+              tabindex="-1"></iframe>
+            <div class="card-overlay"></div>
+            <div class="card-shimmer"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag" style="background:#6bfbce22;color:#1db88a">web app</span>
+            <h3 class="card-name">Éditeur de Cours</h3>
+            <a class="card-arrow" href="#" data-url="https://firecamp-official.github.io/Editeur-cours/"
+              data-title="Éditeur de Cours" data-desc="Crée et édite tes cours facilement.">voir <i
+                data-lucide="arrow-right" class="icon-arrow"></i></a>
+          </div>
+        </div>
+        <div class="proj-card" data-url="https://firecamp-official.github.io/SportProgram/" data-title="Sport Program"
+          data-desc="Programme tes entraînements sur mesure.">
+          <div class="card-img-wrap">
+            <iframe src="https://firecamp-official.github.io/SportProgram/" scrolling="no" loading="lazy"
+              tabindex="-1"></iframe>
+            <div class="card-overlay"></div>
+            <div class="card-shimmer"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag" style="background:#6bfbce22;color:#1db88a">web app</span>
+            <h3 class="card-name">Sport Program</h3>
+            <a class="card-arrow" href="#" data-url="https://firecamp-official.github.io/SportProgram/"
+              data-title="Sport Program" data-desc="Programme tes entraînements sur mesure.">voir <i
+                data-lucide="arrow-right" class="icon-arrow"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATÉGORIE 3 : Jeux Web -->
+    <div class="category" id="cat-jeux">
+      <div class="cat-header">
+        <span class="cat-icon"><i data-lucide="gamepad-2"></i></span>
+        <h2 class="cat-title">Jeux Web</h2>
+        <span class="cat-count">4</span>
+      </div>
+      <div class="cards-grid">
+        <div class="proj-card" data-url="https://hold-to-win.vercel.app/" data-title="Hold to Win"
+          data-desc="Tiens le plus longtemps possible.">
+          <div class="card-img-wrap">
+            <iframe src="https://hold-to-win.vercel.app/" scrolling="no" loading="lazy" tabindex="-1"></iframe>
+            <div class="card-overlay"></div>
+            <div class="card-shimmer"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag" style="background:#919afb22;color:#6b6ff5">jeu</span>
+            <h3 class="card-name">Hold to Win</h3>
+            <a class="card-arrow" href="#" data-url="https://hold-to-win.vercel.app/" data-title="Hold to Win"
+              data-desc="Tiens le plus longtemps possible.">voir <i data-lucide="arrow-right"
+                class="icon-arrow"></i></a>
+          </div>
+        </div>
+        <div class="proj-card" data-url="https://freeze-or-die.vercel.app/" data-title="Freeze or Die"
+          data-desc="Survie sous pression glaciale.">
+          <div class="card-img-wrap">
+            <iframe src="https://freeze-or-die.vercel.app/" scrolling="no" loading="lazy" tabindex="-1"></iframe>
+            <div class="card-overlay"></div>
+            <div class="card-shimmer"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag" style="background:#919afb22;color:#6b6ff5">jeu</span>
+            <h3 class="card-name">Freeze or Die</h3>
+            <a class="card-arrow" href="#" data-url="https://freeze-or-die.vercel.app/" data-title="Freeze or Die"
+              data-desc="Survie sous pression glaciale.">voir <i data-lucide="arrow-right" class="icon-arrow"></i></a>
+          </div>
+        </div>
+        <div class="proj-card" data-url="https://j-party.vercel.app/" data-title="Party Chaos"
+          data-desc="Le jeu de soirée ultime.">
+          <div class="card-img-wrap">
+            <iframe src="https://j-party.vercel.app/" scrolling="no" loading="lazy" tabindex="-1"></iframe>
+            <div class="card-overlay"></div>
+            <div class="card-shimmer"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag" style="background:#919afb22;color:#6b6ff5">jeu</span>
+            <h3 class="card-name">Party Chaos</h3>
+            <a class="card-arrow" href="#" data-url="https://j-party.vercel.app/" data-title="Party Chaos"
+              data-desc="Le jeu de soirée ultime.">voir <i data-lucide="arrow-right" class="icon-arrow"></i></a>
+          </div>
+        </div>
+        <div class="proj-card" data-url="https://firecamp-official.github.io/RealmLegend/" data-title="RealmLegend"
+          data-desc="Un RPG épique !">
+          <div class="card-img-wrap">
+            <iframe src="https://firecamp-official.github.io/RealmLegend/" scrolling="no" loading="lazy"
+              tabindex="-1"></iframe>
+            <div class="card-overlay"></div>
+            <div class="card-shimmer"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag" style="background:#919afb22;color:#6b6ff5">jeu</span>
+            <h3 class="card-name">RealmLegend</h3>
+            <a class="card-arrow" href="#" data-url="https://firecamp-official.github.io/RealmLegend/"
+              data-title="RealmLegend" data-desc="Un RPG épique !">voir <i data-lucide="arrow-right"
+                class="icon-arrow"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATÉGORIE 4 : Sites -->
+    <div class="category" id="cat-sites">
+      <div class="cat-header">
+        <span class="cat-icon"><i data-lucide="layout-panel-left"></i></span>
+        <h2 class="cat-title">Sites</h2>
+        <span class="cat-count">4</span>
+      </div>
+      <div class="cards-grid">
+        <div class="proj-card"
+          data-url="https://firecamp-official.github.io/template-examples/type_portfolio/index.html"
+          data-title="Portfolio — Photographe" data-desc="Site vitrine qualitatif pour un photographe.">
+          <div class="card-img-wrap">
+            <iframe src="https://firecamp-official.github.io/template-examples/type_portfolio/index.html" scrolling="no"
+              loading="lazy" tabindex="-1"></iframe>
+            <div class="card-overlay"></div>
+            <div class="card-shimmer"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag" style="background:#00e4fb22;color:#00bcd4">site</span>
+            <h3 class="card-name">Portfolio Photographe</h3>
+            <a class="card-arrow" href="#"
+              data-url="https://firecamp-official.github.io/template-examples/type_portfolio/index.html"
+              data-title="Portfolio — Photographe" data-desc="Site vitrine qualitatif pour un photographe.">voir <i
+                data-lucide="arrow-right" class="icon-arrow"></i></a>
+          </div>
+        </div>
+        <div class="proj-card" data-url="https://firecamp-official.github.io/template-examples/type_coiffeur/index.html"
+          data-title="Portfolio — Coiffeur" data-desc="Site vitrine qualitatif pour un coiffeur.">
+          <div class="card-img-wrap">
+            <iframe src="https://firecamp-official.github.io/template-examples/type_coiffeur/index.html" scrolling="no"
+              loading="lazy" tabindex="-1"></iframe>
+            <div class="card-overlay"></div>
+            <div class="card-shimmer"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag" style="background:#00e4fb22;color:#00bcd4">site</span>
+            <h3 class="card-name">Portfolio Coiffeur</h3>
+            <a class="card-arrow" href="#"
+              data-url="https://firecamp-official.github.io/template-examples/type_coiffeur/index.html"
+              data-title="Portfolio — Coiffeur" data-desc="Site vitrine qualitatif pour un coiffeur.">voir <i
+                data-lucide="arrow-right" class="icon-arrow"></i></a>
+          </div>
+        </div>
+        <div class="proj-card" data-url="https://firecamp-official.github.io/template-examples/type_devperso/index.html"
+          data-title="Portfolio — Coach" data-desc="Site vitrine pour un coach en développement personnel.">
+          <div class="card-img-wrap">
+            <iframe src="https://firecamp-official.github.io/template-examples/type_devperso/index.html" scrolling="no"
+              loading="lazy" tabindex="-1"></iframe>
+            <div class="card-overlay"></div>
+            <div class="card-shimmer"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag" style="background:#00e4fb22;color:#00bcd4">site</span>
+            <h3 class="card-name">Portfolio Coach</h3>
+            <a class="card-arrow" href="#"
+              data-url="https://firecamp-official.github.io/template-examples/type_devperso/index.html"
+              data-title="Portfolio — Coach" data-desc="Site vitrine pour un coach en développement personnel.">voir <i
+                data-lucide="arrow-right" class="icon-arrow"></i></a>
+          </div>
+        </div>
+        <div class="proj-card" data-url="https://firecamp-official.github.io/template-examples/type_bar/index.html"
+          data-title="Portfolio — Bar" data-desc="Site vitrine qualitatif pour un bar.">
+          <div class="card-img-wrap">
+            <iframe src="https://firecamp-official.github.io/template-examples/type_bar/index.html" scrolling="no"
+              loading="lazy" tabindex="-1"></iframe>
+            <div class="card-overlay"></div>
+            <div class="card-shimmer"></div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag" style="background:#00e4fb22;color:#00bcd4">site</span>
+            <h3 class="card-name">Portfolio Bar</h3>
+            <a class="card-arrow" href="#"
+              data-url="https://firecamp-official.github.io/template-examples/type_bar/index.html"
+              data-title="Portfolio — Bar" data-desc="Site vitrine qualitatif pour un bar.">voir <i
+                data-lucide="arrow-right" class="icon-arrow"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-logo">johan.lambert</span>
+      <div class="footer-links">
+        <a href="#" id="footerAbout">à propos</a>
+        <a href="#" id="footerContact">contact</a>
+        <a href="https://github.com/johanlamb-dev" target="_blank">github</a>
+      </div>
+      <span class="footer-copy">fait avec <i data-lucide="heart" class="icon-footer"></i> &amp; du café</span>
+    </div>
+  </footer>
+
+  <!-- SCROLL TO TOP -->
+  <button class="scroll-top" id="scrollTop" aria-label="Retour en haut">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <!-- MODAL : Projet Preview -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-box modal-project">
+      <div class="modal-handle"></div>
+      <div class="modal-header">
+        <div>
+          <span class="modal-tag" id="modalTag"></span>
+          <h2 class="modal-title" id="modalTitle"></h2>
+          <p class="modal-desc" id="modalDesc"></p>
+        </div>
+        <button class="modal-close" id="closeProject"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-preview">
+        <iframe id="previewFrame" src="" loading="lazy" title="Preview du projet"></iframe>
+      </div>
+      <div class="modal-actions">
+        <a id="modalLink" href="#" target="_blank" rel="noopener" class="btn-open">
+          ouvrir le site <i data-lucide="arrow-up-right" class="icon-inline"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL : À propos -->
+  <div class="modal-overlay" id="aboutModal">
+    <div class="modal-box modal-about">
+      <div class="modal-handle"></div>
+      <button class="modal-close" id="closeAbout"><i data-lucide="x"></i></button>
+      <div class="about-content">
+        <div class="about-avatar">JL</div>
+        <h2>johan.lambert</h2>
+        <p class="about-bio">Développeur web passionné, je crée des apps, des jeux et des sites web avec soin. J'aime
+          les interfaces propres, les animations subtiles et bref, le dev front !!</p>
+        <div class="about-skills">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>Git</span>
+        </div>
+        <div class="about-icons">
+          <span class="abt-icon"><i data-lucide="zap" class="icon-abt"></i> Rapide</span>
+          <span class="abt-icon"><i data-lucide="palette" class="icon-abt"></i> Créatif</span>
+          <span class="abt-icon"><i data-lucide="smartphone" class="icon-abt"></i> Mobile-first</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL : Contact -->
+  <div class="modal-overlay" id="contactModal">
+    <div class="modal-box modal-contact">
+      <div class="modal-handle"></div>
+      <button class="modal-close" id="closeContact"><i data-lucide="x"></i></button>
+      <h2 class="contact-title">dis bonjour <i data-lucide="hand-metal" class="icon-inline"></i></h2>
+      <p class="contact-sub">pour un projet, une collab, ou juste pour discuter !</p>
+      <div class="contact-items">
+        <a href="mailto:johan.lambert.dev@gmail.com" class="contact-item">
+          <span class="ci-icon"><i data-lucide="mail"></i></span>
+          <span>johan.lambert.dev@gmail.com</span>
+        </a>
+        <a href="https://github.com/johanlamb-dev" target="_blank" class="contact-item">
+          <span class="ci-icon"><i data-lucide="github"></i></span>
+          <span>github / johanlamb-dev</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
