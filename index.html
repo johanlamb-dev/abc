@@ -1,153 +1,192 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>johan.lambert — portfolio</title>
+  <title>johan.lambert — dev</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
 
-  <!-- CUSTOM CURSOR -->
-  <div class="cursor cursor-dot" id="cursorDot"></div>
-  <div class="cursor cursor-ring" id="cursorRing"></div>
+  <!-- MAGNETIC CURSOR -->
+  <div id="cursorDot"></div>
+  <div id="cursorTrail"></div>
 
   <!-- HEADER -->
   <header class="site-header" id="siteHeader">
     <div class="header-inner">
-      <a href="#" class="logo">johan.lambert</a>
+      <a href="#" class="logo">
+        <span class="logo-jl">JL</span>
+        <span class="logo-full">johan.lambert</span>
+      </a>
       <nav class="header-nav">
-        <a href="#projets" class="nav-link">projets</a>
-        <a href="#" class="nav-link" id="openAbout">à propos</a>
-        <a href="#" class="nav-link" id="openContact">contact</a>
+        <a href="#projets" class="nav-link"><span>projets</span></a>
+        <a href="#" class="nav-link" id="openAbout"><span>à propos</span></a>
+        <a href="#" class="nav-link btn-contact" id="openContact">contact <i data-lucide="arrow-up-right" class="icon-xs"></i></a>
       </nav>
       <button class="burger" id="burgerBtn" aria-label="Menu">
-        <span></span><span></span><span></span>
+        <span></span><span></span>
       </button>
     </div>
     <div class="mobile-nav" id="mobileNav">
-      <a href="#projets" class="mob-link" id="mobileProjet">projets</a>
-      <a href="#" class="mob-link" id="mobileAbout">à propos</a>
-      <a href="#" class="mob-link" id="mobileContact">contact</a>
+      <a href="#projets" class="mob-link" id="mobileProjet">
+        <span class="mob-num">01</span>projets
+      </a>
+      <a href="#" class="mob-link" id="mobileAbout">
+        <span class="mob-num">02</span>à propos
+      </a>
+      <a href="#" class="mob-link" id="mobileContact">
+        <span class="mob-num">03</span>contact
+      </a>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-blob blob1"></div>
-    <div class="hero-blob blob2"></div>
-    <div class="hero-blob blob3"></div>
+    <div class="hero-bg-text" aria-hidden="true">DEV</div>
     <div class="hero-content">
-      <p class="hero-eyebrow"><span class="eyebrow-dot"></span> développeur web</p>
-      <h1 class="hero-title">je <span class="accent-cyan">crée</span><br>des trucs<br><span
-          class="accent-purple">cool.</span></h1>
-      <p class="hero-sub">apps, jeux, sites — fait avec passion &amp; curiosité.</p>
-      <a href="#projets" class="cta-btn">
-        <span>voir les projets</span>
-        <i data-lucide="arrow-down" class="icon-inline"></i>
-      </a>
-    </div>
-    <div class="hero-deco">
-      <div class="deco-card dc1"></div>
-      <div class="deco-card dc2"></div>
-      <div class="deco-card dc3"></div>
+      <div class="hero-eyebrow">
+        <span class="status-dot"></span>
+        <span class="hero-mono">DÉVELOPPEUR WEB — DISPONIBLE</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="line-wrap"><span class="line-inner line-1">je</span></span>
+        <span class="line-wrap"><span class="line-inner line-2"><em>crée</em> des</span></span>
+        <span class="line-wrap"><span class="line-inner line-3">trucs <mark>cool.</mark></span></span>
+      </h1>
+      <div class="hero-bottom">
+        <p class="hero-sub">apps · jeux · sites<br>fait avec passion &amp; curiosité.</p>
+        <a href="#projets" class="cta-btn" id="ctaBtn">
+          <div class="cta-inner">
+            <span>voir les projets</span>
+            <i data-lucide="arrow-right" class="icon-s"></i>
+          </div>
+        </a>
+      </div>
     </div>
     <div class="hero-stats">
       <div class="stat">
-        <span class="stat-num">14+</span>
+        <span class="stat-num">14<sup>+</sup></span>
         <span class="stat-label">projets</span>
       </div>
+      <div class="stat-sep"></div>
       <div class="stat">
         <span class="stat-num">4</span>
         <span class="stat-label">catégories</span>
       </div>
     </div>
+    <div class="hero-scroll-hint">
+      <i data-lucide="mouse" class="icon-s"></i>
+      <span class="hero-mono" style="font-size:.6rem">scroll</span>
+    </div>
   </section>
 
-  <div class="section-divider"></div>
+  <!-- TICKER -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-track">
+      <span>HTML</span><span class="sep">✦</span>
+      <span>CSS</span><span class="sep">✦</span>
+      <span>JavaScript</span><span class="sep">✦</span>
+      <span>React</span><span class="sep">✦</span>
+      <span>Node.js</span><span class="sep">✦</span>
+      <span>Git</span><span class="sep">✦</span>
+      <span>Design</span><span class="sep">✦</span>
+      <span>Animations</span><span class="sep">✦</span>
+      <span>HTML</span><span class="sep">✦</span>
+      <span>CSS</span><span class="sep">✦</span>
+      <span>JavaScript</span><span class="sep">✦</span>
+      <span>React</span><span class="sep">✦</span>
+      <span>Node.js</span><span class="sep">✦</span>
+      <span>Git</span><span class="sep">✦</span>
+      <span>Design</span><span class="sep">✦</span>
+      <span>Animations</span><span class="sep">✦</span>
+    </div>
+  </div>
 
   <!-- PROJETS -->
   <section class="projets" id="projets">
     <div class="section-header">
-      <span class="section-label"><i data-lucide="sparkles" class="icon-label"></i> mes projets</span>
-      <div class="section-line"></div>
+      <p class="section-label hero-mono">— MES PROJETS</p>
+      <h2 class="section-title">ce que<br><em>j'ai construit.</em></h2>
     </div>
 
     <!-- CATEGORY TABS -->
     <div class="cat-tabs">
-      <button class="cat-tab active" data-filter="all">
-        <i data-lucide="layout-grid" style="width:13px;height:13px"></i> Tout
-      </button>
-      <button class="cat-tab" data-filter="cat-social">
-        <i data-lucide="message-circle" style="width:13px;height:13px"></i> Social
-      </button>
-      <button class="cat-tab" data-filter="cat-web">
-        <i data-lucide="globe" style="width:13px;height:13px"></i> Apps Web
-      </button>
-      <button class="cat-tab" data-filter="cat-jeux">
-        <i data-lucide="gamepad-2" style="width:13px;height:13px"></i> Jeux
-      </button>
-      <button class="cat-tab" data-filter="cat-sites">
-        <i data-lucide="layout-panel-left" style="width:13px;height:13px"></i> Sites
-      </button>
+      <button class="cat-tab active" data-filter="all">Tout</button>
+      <button class="cat-tab" data-filter="cat-social">Social</button>
+      <button class="cat-tab" data-filter="cat-web">Apps Web</button>
+      <button class="cat-tab" data-filter="cat-jeux">Jeux</button>
+      <button class="cat-tab" data-filter="cat-sites">Sites</button>
     </div>
 
     <!-- CATÉGORIE 1 : Apps sociales -->
     <div class="category" id="cat-social">
       <div class="cat-header">
-        <span class="cat-icon"><i data-lucide="message-circle"></i></span>
-        <h2 class="cat-title">Apps sociales</h2>
-        <span class="cat-count">3</span>
+        <span class="cat-num hero-mono">01</span>
+        <h3 class="cat-title">Apps sociales</h3>
+        <span class="cat-count hero-mono">3 projets</span>
       </div>
       <div class="cards-grid">
-        <div class="proj-card" data-url="https://helyx.netlify.app/" data-title="Helyx"
-          data-desc="L'entraide scolaire sous un nouveau jour.">
+        <div class="proj-card" data-url="https://helyx.netlify.app/" data-title="Helyx" data-desc="L'entraide scolaire sous un nouveau jour.">
           <div class="card-img-wrap">
             <iframe src="https://helyx.netlify.app/" scrolling="no" loading="lazy" tabindex="-1"></iframe>
             <div class="card-overlay"></div>
-            <div class="card-shimmer"></div>
           </div>
           <div class="card-body">
-            <span class="card-tag" style="background:#00e4fb22;color:#00bcd4">social</span>
+            <div class="card-top">
+              <span class="card-tag" data-color="cyan">social</span>
+              <span class="card-num hero-mono">01</span>
+            </div>
             <h3 class="card-name">Helyx</h3>
-            <a class="card-arrow" href="#" data-url="https://helyx.netlify.app/" data-title="Helyx"
-              data-desc="L'entraide scolaire sous un nouveau jour.">voir <i data-lucide="arrow-right"
-                class="icon-arrow"></i></a>
+            <p class="card-desc">L'entraide scolaire sous un nouveau jour.</p>
+            <div class="card-footer">
+              <a class="card-arrow" href="#" data-url="https://helyx.netlify.app/" data-title="Helyx" data-desc="L'entraide scolaire sous un nouveau jour.">
+                voir le projet <i data-lucide="arrow-right" class="icon-xs"></i>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="proj-card" data-url="https://post2-talk.vercel.app/" data-title="Post2Talk"
-          data-desc="Parle, partage, connecte.">
+
+        <div class="proj-card" data-url="https://post2-talk.vercel.app/" data-title="Post2Talk" data-desc="Parle, partage, connecte.">
           <div class="card-img-wrap">
             <iframe src="https://post2-talk.vercel.app/" scrolling="no" loading="lazy" tabindex="-1"></iframe>
             <div class="card-overlay"></div>
-            <div class="card-shimmer"></div>
           </div>
           <div class="card-body">
-            <span class="card-tag" style="background:#00e4fb22;color:#00bcd4">social</span>
+            <div class="card-top">
+              <span class="card-tag" data-color="cyan">social</span>
+              <span class="card-num hero-mono">02</span>
+            </div>
             <h3 class="card-name">Post2Talk</h3>
-            <a class="card-arrow" href="#" data-url="https://post2-talk.vercel.app/" data-title="Post2Talk"
-              data-desc="Parle, partage, connecte.">voir <i data-lucide="arrow-right" class="icon-arrow"></i></a>
+            <p class="card-desc">Parle, partage, connecte.</p>
+            <div class="card-footer">
+              <a class="card-arrow" href="#" data-url="https://post2-talk.vercel.app/" data-title="Post2Talk" data-desc="Parle, partage, connecte.">
+                voir le projet <i data-lucide="arrow-right" class="icon-xs"></i>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="proj-card" data-url="https://syncupcrew.netlify.app/" data-title="SyncUp Crew"
-          data-desc="Organisez-vous entre amis.">
+
+        <div class="proj-card" data-url="https://syncupcrew.netlify.app/" data-title="SyncUp Crew" data-desc="Organisez-vous entre amis.">
           <div class="card-img-wrap">
             <iframe src="https://syncupcrew.netlify.app/" scrolling="no" loading="lazy" tabindex="-1"></iframe>
             <div class="card-overlay"></div>
-            <div class="card-shimmer"></div>
           </div>
           <div class="card-body">
-            <span class="card-tag" style="background:#00e4fb22;color:#00bcd4">social</span>
+            <div class="card-top">
+              <span class="card-tag" data-color="cyan">social</span>
+              <span class="card-num hero-mono">03</span>
+            </div>
             <h3 class="card-name">SyncUp</h3>
-            <a class="card-arrow" href="#" data-url="https://syncupcrew.netlify.app/" data-title="SyncUp Crew"
-              data-desc="Organisez-vous entre amis.">voir <i data-lucide="arrow-right" class="icon-arrow"></i></a>
+            <p class="card-desc">Organisez-vous entre amis.</p>
+            <div class="card-footer">
+              <a class="card-arrow" href="#" data-url="https://syncupcrew.netlify.app/" data-title="SyncUp Crew" data-desc="Organisez-vous entre amis.">
+                voir le projet <i data-lucide="arrow-right" class="icon-xs"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -156,223 +195,297 @@
     <!-- CATÉGORIE 2 : Apps Web -->
     <div class="category" id="cat-web">
       <div class="cat-header">
-        <span class="cat-icon"><i data-lucide="globe"></i></span>
-        <h2 class="cat-title">Apps Web</h2>
-        <span class="cat-count">3</span>
+        <span class="cat-num hero-mono">02</span>
+        <h3 class="cat-title">Apps Web</h3>
+        <span class="cat-count hero-mono">3 projets</span>
       </div>
       <div class="cards-grid">
-        <div class="proj-card" data-url="https://firecamp-official.github.io/FrigoSmart/" data-title="FrigoSmart"
-          data-desc="Gérez votre frigo intelligemment.">
+        <div class="proj-card" data-url="https://firecamp-official.github.io/FrigoSmart/" data-title="FrigoSmart" data-desc="Gérez votre frigo intelligemment.">
           <div class="card-img-wrap">
-            <iframe src="https://firecamp-official.github.io/FrigoSmart/" scrolling="no" loading="lazy"
-              tabindex="-1"></iframe>
+            <iframe src="https://firecamp-official.github.io/FrigoSmart/" scrolling="no" loading="lazy" tabindex="-1"></iframe>
             <div class="card-overlay"></div>
-            <div class="card-shimmer"></div>
           </div>
           <div class="card-body">
-            <span class="card-tag" style="background:#6bfbce22;color:#1db88a">web app</span>
+            <div class="card-top">
+              <span class="card-tag" data-color="green">web app</span>
+              <span class="card-num hero-mono">01</span>
+            </div>
             <h3 class="card-name">FrigoSmart</h3>
-            <a class="card-arrow" href="#" data-url="https://firecamp-official.github.io/FrigoSmart/"
-              data-title="FrigoSmart" data-desc="Gérez votre frigo intelligemment.">voir <i data-lucide="arrow-right"
-                class="icon-arrow"></i></a>
+            <p class="card-desc">Gérez votre frigo intelligemment.</p>
+            <div class="card-footer">
+              <a class="card-arrow" href="#" data-url="https://firecamp-official.github.io/FrigoSmart/" data-title="FrigoSmart" data-desc="Gérez votre frigo intelligemment.">
+                voir le projet <i data-lucide="arrow-right" class="icon-xs"></i>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="proj-card" data-url="https://firecamp-official.github.io/Editeur-cours/"
-          data-title="Éditeur de Cours" data-desc="Crée et édite tes cours facilement.">
+
+        <div class="proj-card" data-url="https://firecamp-official.github.io/Editeur-cours/" data-title="Editeur de Cours" data-desc="Créez et éditez vos cours facilement.">
           <div class="card-img-wrap">
-            <iframe src="https://firecamp-official.github.io/Editeur-cours/" scrolling="no" loading="lazy"
-              tabindex="-1"></iframe>
+            <iframe src="https://firecamp-official.github.io/Editeur-cours/" scrolling="no" loading="lazy" tabindex="-1"></iframe>
             <div class="card-overlay"></div>
-            <div class="card-shimmer"></div>
           </div>
           <div class="card-body">
-            <span class="card-tag" style="background:#6bfbce22;color:#1db88a">web app</span>
-            <h3 class="card-name">Éditeur de Cours</h3>
-            <a class="card-arrow" href="#" data-url="https://firecamp-official.github.io/Editeur-cours/"
-              data-title="Éditeur de Cours" data-desc="Crée et édite tes cours facilement.">voir <i
-                data-lucide="arrow-right" class="icon-arrow"></i></a>
+            <div class="card-top">
+              <span class="card-tag" data-color="green">web app</span>
+              <span class="card-num hero-mono">02</span>
+            </div>
+            <h3 class="card-name">Editeur de Cours</h3>
+            <p class="card-desc">Créez et éditez vos cours facilement.</p>
+            <div class="card-footer">
+              <a class="card-arrow" href="#" data-url="https://firecamp-official.github.io/Editeur-cours/" data-title="Editeur de Cours" data-desc="Créez et éditez vos cours facilement.">
+                voir le projet <i data-lucide="arrow-right" class="icon-xs"></i>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="proj-card" data-url="https://firecamp-official.github.io/SportProgram/" data-title="Sport Program"
-          data-desc="Programme tes entraînements sur mesure.">
+
+        <div class="proj-card" data-url="https://firecamp-official.github.io/SportProgram/" data-title="Sport Program" data-desc="Programme tes entraînements sur mesure. Contacte-moi pour obtenir ta version personnalisée !">
           <div class="card-img-wrap">
-            <iframe src="https://firecamp-official.github.io/SportProgram/" scrolling="no" loading="lazy"
-              tabindex="-1"></iframe>
+            <iframe src="https://firecamp-official.github.io/SportProgram/" scrolling="no" loading="lazy" tabindex="-1"></iframe>
             <div class="card-overlay"></div>
-            <div class="card-shimmer"></div>
           </div>
           <div class="card-body">
-            <span class="card-tag" style="background:#6bfbce22;color:#1db88a">web app</span>
+            <div class="card-top">
+              <span class="card-tag" data-color="green">web app</span>
+              <span class="card-num hero-mono">03</span>
+            </div>
             <h3 class="card-name">Sport Program</h3>
-            <a class="card-arrow" href="#" data-url="https://firecamp-official.github.io/SportProgram/"
-              data-title="Sport Program" data-desc="Programme tes entraînements sur mesure.">voir <i
-                data-lucide="arrow-right" class="icon-arrow"></i></a>
+            <p class="card-desc">Programme tes entraînements sur mesure.</p>
+            <div class="card-footer">
+              <a class="card-arrow" href="#" data-url="https://firecamp-official.github.io/SportProgram/" data-title="Sport Program" data-desc="Programme tes entraînements sur mesure.">
+                voir le projet <i data-lucide="arrow-right" class="icon-xs"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- CATÉGORIE 3 : Jeux Web -->
+    <!-- CATÉGORIE 3 : Jeux -->
     <div class="category" id="cat-jeux">
       <div class="cat-header">
-        <span class="cat-icon"><i data-lucide="gamepad-2"></i></span>
-        <h2 class="cat-title">Jeux Web</h2>
-        <span class="cat-count">4</span>
+        <span class="cat-num hero-mono">03</span>
+        <h3 class="cat-title">Jeux</h3>
+        <span class="cat-count hero-mono">4 projets</span>
       </div>
       <div class="cards-grid">
-        <div class="proj-card" data-url="https://hold-to-win.vercel.app/" data-title="Hold to Win"
-          data-desc="Tiens le plus longtemps possible.">
+        <div class="proj-card" data-url="https://hold-to-win.vercel.app/" data-title="Hold to Win" data-desc="Maintenez le bouton enfoncé pour gagner !">
           <div class="card-img-wrap">
             <iframe src="https://hold-to-win.vercel.app/" scrolling="no" loading="lazy" tabindex="-1"></iframe>
             <div class="card-overlay"></div>
-            <div class="card-shimmer"></div>
           </div>
           <div class="card-body">
-            <span class="card-tag" style="background:#919afb22;color:#6b6ff5">jeu</span>
+            <div class="card-top">
+              <span class="card-tag" data-color="orange">jeu</span>
+              <span class="card-num hero-mono">01</span>
+            </div>
             <h3 class="card-name">Hold to Win</h3>
-            <a class="card-arrow" href="#" data-url="https://hold-to-win.vercel.app/" data-title="Hold to Win"
-              data-desc="Tiens le plus longtemps possible.">voir <i data-lucide="arrow-right"
-                class="icon-arrow"></i></a>
+            <p class="card-desc">Maintenez le bouton enfoncé pour gagner !</p>
+            <div class="card-footer">
+              <a class="card-arrow" href="#" data-url="https://hold-to-win.vercel.app/" data-title="Hold to Win" data-desc="Maintenez le bouton enfoncé pour gagner !">
+                voir le projet <i data-lucide="arrow-right" class="icon-xs"></i>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="proj-card" data-url="https://freeze-or-die.vercel.app/" data-title="Freeze or Die"
-          data-desc="Survie sous pression glaciale.">
+
+        <div class="proj-card" data-url="https://freeze-or-die.vercel.app/" data-title="Freeze or Die" data-desc="Tu bouges, tu perds !">
           <div class="card-img-wrap">
             <iframe src="https://freeze-or-die.vercel.app/" scrolling="no" loading="lazy" tabindex="-1"></iframe>
             <div class="card-overlay"></div>
-            <div class="card-shimmer"></div>
           </div>
           <div class="card-body">
-            <span class="card-tag" style="background:#919afb22;color:#6b6ff5">jeu</span>
+            <div class="card-top">
+              <span class="card-tag" data-color="orange">jeu</span>
+              <span class="card-num hero-mono">02</span>
+            </div>
             <h3 class="card-name">Freeze or Die</h3>
-            <a class="card-arrow" href="#" data-url="https://freeze-or-die.vercel.app/" data-title="Freeze or Die"
-              data-desc="Survie sous pression glaciale.">voir <i data-lucide="arrow-right" class="icon-arrow"></i></a>
+            <p class="card-desc">Tu bouges, tu perds !</p>
+            <div class="card-footer">
+              <a class="card-arrow" href="#" data-url="https://freeze-or-die.vercel.app/" data-title="Freeze or Die" data-desc="Tu bouges, tu perds !">
+                voir le projet <i data-lucide="arrow-right" class="icon-xs"></i>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="proj-card" data-url="https://j-party.vercel.app/" data-title="Party Chaos"
-          data-desc="Le jeu de soirée ultime.">
+
+        <div class="proj-card" data-url="https://j-party.vercel.app/" data-title="Party Chaos" data-desc="Le meilleur des jeux entre amis.">
           <div class="card-img-wrap">
             <iframe src="https://j-party.vercel.app/" scrolling="no" loading="lazy" tabindex="-1"></iframe>
             <div class="card-overlay"></div>
-            <div class="card-shimmer"></div>
           </div>
           <div class="card-body">
-            <span class="card-tag" style="background:#919afb22;color:#6b6ff5">jeu</span>
+            <div class="card-top">
+              <span class="card-tag" data-color="orange">jeu</span>
+              <span class="card-num hero-mono">03</span>
+            </div>
             <h3 class="card-name">Party Chaos</h3>
-            <a class="card-arrow" href="#" data-url="https://j-party.vercel.app/" data-title="Party Chaos"
-              data-desc="Le jeu de soirée ultime.">voir <i data-lucide="arrow-right" class="icon-arrow"></i></a>
+            <p class="card-desc">Le meilleur des jeux entre amis.</p>
+            <div class="card-footer">
+              <a class="card-arrow" href="#" data-url="https://j-party.vercel.app/" data-title="Party Chaos" data-desc="Le meilleur des jeux entre amis.">
+                voir le projet <i data-lucide="arrow-right" class="icon-xs"></i>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="proj-card" data-url="https://firecamp-official.github.io/RealmLegend/" data-title="RealmLegend"
-          data-desc="Un RPG épique !">
+
+        <div class="proj-card" data-url="https://firecamp-official.github.io/RealmLegend/" data-title="Realm Legend" data-desc="Un jeu d'aventure épique.">
           <div class="card-img-wrap">
-            <iframe src="https://firecamp-official.github.io/RealmLegend/" scrolling="no" loading="lazy"
-              tabindex="-1"></iframe>
+            <iframe src="https://firecamp-official.github.io/RealmLegend/" scrolling="no" loading="lazy" tabindex="-1"></iframe>
             <div class="card-overlay"></div>
-            <div class="card-shimmer"></div>
           </div>
           <div class="card-body">
-            <span class="card-tag" style="background:#919afb22;color:#6b6ff5">jeu</span>
-            <h3 class="card-name">RealmLegend</h3>
-            <a class="card-arrow" href="#" data-url="https://firecamp-official.github.io/RealmLegend/"
-              data-title="RealmLegend" data-desc="Un RPG épique !">voir <i data-lucide="arrow-right"
-                class="icon-arrow"></i></a>
+            <div class="card-top">
+              <span class="card-tag" data-color="orange">jeu</span>
+              <span class="card-num hero-mono">04</span>
+            </div>
+            <h3 class="card-name">Realm Legend</h3>
+            <p class="card-desc">Un jeu d'aventure épique.</p>
+            <div class="card-footer">
+              <a class="card-arrow" href="#" data-url="https://firecamp-official.github.io/RealmLegend/" data-title="Realm Legend" data-desc="Un jeu d'aventure épique.">
+                voir le projet <i data-lucide="arrow-right" class="icon-xs"></i>
+              </a>
+            </div>
+          </div>
+
+      </div>
+      
+           <div class="proj-card" data-url="https://grid-arena-two.vercel.app/" data-title="Grid Arena" data-desc="Un battle royal en tour par tour. (demo)">
+          <div class="card-img-wrap">
+            <iframe src="https://grid-arena-two.vercel.app/" scrolling="no" loading="lazy" tabindex="-1"></iframe>
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <span class="card-tag" data-color="orange">jeu</span>
+              <span class="card-num hero-mono">04</span>
+            </div>
+            <h3 class="card-name">Grid Arena</h3>
+            <p class="card-desc">Un battle royal en tour par tour. (demo)</p>
+            <div class="card-footer">
+              <a class="card-arrow" href="#" data-url="https://grid-arena-two.vercel.app/" data-title="Grid Arena" data-desc="Un battle royal en tour par tour. (demo)">
+                voir le projet <i data-lucide="arrow-right" class="icon-xs"></i>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
     </div>
 
     <!-- CATÉGORIE 4 : Sites -->
     <div class="category" id="cat-sites">
       <div class="cat-header">
-        <span class="cat-icon"><i data-lucide="layout-panel-left"></i></span>
-        <h2 class="cat-title">Sites</h2>
-        <span class="cat-count">4</span>
+        <span class="cat-num hero-mono">04</span>
+        <h3 class="cat-title">Sites</h3>
+        <span class="cat-count hero-mono">4 projets</span>
       </div>
       <div class="cards-grid">
-        <div class="proj-card"
-          data-url="https://firecamp-official.github.io/template-examples/type_portfolio/index.html"
-          data-title="Portfolio — Photographe" data-desc="Site vitrine qualitatif pour un photographe.">
+        <div class="proj-card" data-url="https://firecamp-official.github.io/template-examples/type_portfolio/index.html" data-title="Portfolio — Photographe" data-desc="Site vitrine qualitatif pour un photographe.">
           <div class="card-img-wrap">
-            <iframe src="https://firecamp-official.github.io/template-examples/type_portfolio/index.html" scrolling="no"
-              loading="lazy" tabindex="-1"></iframe>
+            <iframe src="https://firecamp-official.github.io/template-examples/type_portfolio/index.html" scrolling="no" loading="lazy" tabindex="-1"></iframe>
             <div class="card-overlay"></div>
-            <div class="card-shimmer"></div>
           </div>
           <div class="card-body">
-            <span class="card-tag" style="background:#00e4fb22;color:#00bcd4">site</span>
+            <div class="card-top">
+              <span class="card-tag" data-color="purple">site</span>
+              <span class="card-num hero-mono">01</span>
+            </div>
             <h3 class="card-name">Portfolio Photographe</h3>
-            <a class="card-arrow" href="#"
-              data-url="https://firecamp-official.github.io/template-examples/type_portfolio/index.html"
-              data-title="Portfolio — Photographe" data-desc="Site vitrine qualitatif pour un photographe.">voir <i
-                data-lucide="arrow-right" class="icon-arrow"></i></a>
+            <p class="card-desc">Site vitrine pour un photographe.</p>
+            <div class="card-footer">
+              <a class="card-arrow" href="#" data-url="https://firecamp-official.github.io/template-examples/type_portfolio/index.html" data-title="Portfolio — Photographe" data-desc="Site vitrine qualitatif pour un photographe.">
+                voir le projet <i data-lucide="arrow-right" class="icon-xs"></i>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="proj-card" data-url="https://firecamp-official.github.io/template-examples/type_coiffeur/index.html"
-          data-title="Portfolio — Coiffeur" data-desc="Site vitrine qualitatif pour un coiffeur.">
+
+        <div class="proj-card" data-url="https://firecamp-official.github.io/template-examples/type_coiffeur/index.html" data-title="Portfolio — Coiffeur" data-desc="Site vitrine qualitatif pour un coiffeur.">
           <div class="card-img-wrap">
-            <iframe src="https://firecamp-official.github.io/template-examples/type_coiffeur/index.html" scrolling="no"
-              loading="lazy" tabindex="-1"></iframe>
+            <iframe src="https://firecamp-official.github.io/template-examples/type_coiffeur/index.html" scrolling="no" loading="lazy" tabindex="-1"></iframe>
             <div class="card-overlay"></div>
-            <div class="card-shimmer"></div>
           </div>
           <div class="card-body">
-            <span class="card-tag" style="background:#00e4fb22;color:#00bcd4">site</span>
+            <div class="card-top">
+              <span class="card-tag" data-color="purple">site</span>
+              <span class="card-num hero-mono">02</span>
+            </div>
             <h3 class="card-name">Portfolio Coiffeur</h3>
-            <a class="card-arrow" href="#"
-              data-url="https://firecamp-official.github.io/template-examples/type_coiffeur/index.html"
-              data-title="Portfolio — Coiffeur" data-desc="Site vitrine qualitatif pour un coiffeur.">voir <i
-                data-lucide="arrow-right" class="icon-arrow"></i></a>
+            <p class="card-desc">Site vitrine pour un coiffeur.</p>
+            <div class="card-footer">
+              <a class="card-arrow" href="#" data-url="https://firecamp-official.github.io/template-examples/type_coiffeur/index.html" data-title="Portfolio — Coiffeur" data-desc="Site vitrine qualitatif pour un coiffeur.">
+                voir le projet <i data-lucide="arrow-right" class="icon-xs"></i>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="proj-card" data-url="https://firecamp-official.github.io/template-examples/type_devperso/index.html"
-          data-title="Portfolio — Coach" data-desc="Site vitrine pour un coach en développement personnel.">
+
+        <div class="proj-card" data-url="https://firecamp-official.github.io/template-examples/type_devperso/index.html" data-title="Portfolio — Coach" data-desc="Site vitrine pour un coach en développement personnel.">
           <div class="card-img-wrap">
-            <iframe src="https://firecamp-official.github.io/template-examples/type_devperso/index.html" scrolling="no"
-              loading="lazy" tabindex="-1"></iframe>
+            <iframe src="https://firecamp-official.github.io/template-examples/type_devperso/index.html" scrolling="no" loading="lazy" tabindex="-1"></iframe>
             <div class="card-overlay"></div>
-            <div class="card-shimmer"></div>
           </div>
           <div class="card-body">
-            <span class="card-tag" style="background:#00e4fb22;color:#00bcd4">site</span>
+            <div class="card-top">
+              <span class="card-tag" data-color="purple">site</span>
+              <span class="card-num hero-mono">03</span>
+            </div>
             <h3 class="card-name">Portfolio Coach</h3>
-            <a class="card-arrow" href="#"
-              data-url="https://firecamp-official.github.io/template-examples/type_devperso/index.html"
-              data-title="Portfolio — Coach" data-desc="Site vitrine pour un coach en développement personnel.">voir <i
-                data-lucide="arrow-right" class="icon-arrow"></i></a>
+            <p class="card-desc">Site pour un coach perso.</p>
+            <div class="card-footer">
+              <a class="card-arrow" href="#" data-url="https://firecamp-official.github.io/template-examples/type_devperso/index.html" data-title="Portfolio — Coach" data-desc="Site vitrine pour un coach en développement personnel.">
+                voir le projet <i data-lucide="arrow-right" class="icon-xs"></i>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="proj-card" data-url="https://firecamp-official.github.io/template-examples/type_bar/index.html"
-          data-title="Portfolio — Bar" data-desc="Site vitrine qualitatif pour un bar.">
+
+        <div class="proj-card" data-url="https://firecamp-official.github.io/template-examples/type_bar/index.html" data-title="Portfolio — Bar" data-desc="Site vitrine qualitatif pour un bar.">
           <div class="card-img-wrap">
-            <iframe src="https://firecamp-official.github.io/template-examples/type_bar/index.html" scrolling="no"
-              loading="lazy" tabindex="-1"></iframe>
+            <iframe src="https://firecamp-official.github.io/template-examples/type_bar/index.html" scrolling="no" loading="lazy" tabindex="-1"></iframe>
             <div class="card-overlay"></div>
-            <div class="card-shimmer"></div>
           </div>
           <div class="card-body">
-            <span class="card-tag" style="background:#00e4fb22;color:#00bcd4">site</span>
+            <div class="card-top">
+              <span class="card-tag" data-color="purple">site</span>
+              <span class="card-num hero-mono">04</span>
+            </div>
             <h3 class="card-name">Portfolio Bar</h3>
-            <a class="card-arrow" href="#"
-              data-url="https://firecamp-official.github.io/template-examples/type_bar/index.html"
-              data-title="Portfolio — Bar" data-desc="Site vitrine qualitatif pour un bar.">voir <i
-                data-lucide="arrow-right" class="icon-arrow"></i></a>
+            <p class="card-desc">Site vitrine pour un bar.</p>
+            <div class="card-footer">
+              <a class="card-arrow" href="#" data-url="https://firecamp-official.github.io/template-examples/type_bar/index.html" data-title="Portfolio — Bar" data-desc="Site vitrine qualitatif pour un bar.">
+                voir le projet <i data-lucide="arrow-right" class="icon-xs"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- CTA BAND -->
+  <div class="cta-band">
+    <div class="cta-band-inner">
+      <p class="cta-band-text">Un projet en tête ?</p>
+      <a href="#" id="ctaBandContact" class="cta-band-btn">Parlons-en <i data-lucide="arrow-up-right" class="icon-s"></i></a>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-inner">
-      <span class="footer-logo">johan.lambert</span>
+      <div class="footer-left">
+        <span class="footer-logo">johan.lambert</span>
+        <span class="footer-copy hero-mono">fait avec <i data-lucide="heart" class="icon-footer"></i> &amp; café</span>
+      </div>
       <div class="footer-links">
         <a href="#" id="footerAbout">à propos</a>
         <a href="#" id="footerContact">contact</a>
-        <a href="https://github.com/johanlamb-dev" target="_blank">github</a>
+        <a href="https://github.com/johanlamb-dev" target="_blank">github <i data-lucide="arrow-up-right" class="icon-xs"></i></a>
       </div>
-      <span class="footer-copy">fait avec <i data-lucide="heart" class="icon-footer"></i> &amp; du café</span>
+    </div>
+    <div class="footer-line">
+      <span class="hero-mono" style="font-size:.6rem;opacity:.3">© 2025 Johan Lambert — tous droits réservés</span>
     </div>
   </footer>
 
@@ -384,21 +497,20 @@
   <!-- MODAL : Projet Preview -->
   <div class="modal-overlay" id="projectModal">
     <div class="modal-box modal-project">
-      <div class="modal-handle"></div>
-      <div class="modal-header">
-        <div>
-          <span class="modal-tag" id="modalTag"></span>
+      <div class="modal-top-bar">
+        <div class="modal-meta">
+          <span class="modal-tag hero-mono" id="modalTag"></span>
           <h2 class="modal-title" id="modalTitle"></h2>
-          <p class="modal-desc" id="modalDesc"></p>
         </div>
         <button class="modal-close" id="closeProject"><i data-lucide="x"></i></button>
       </div>
+      <p class="modal-desc hero-mono" id="modalDesc"></p>
       <div class="modal-preview">
         <iframe id="previewFrame" src="" loading="lazy" title="Preview du projet"></iframe>
       </div>
       <div class="modal-actions">
         <a id="modalLink" href="#" target="_blank" rel="noopener" class="btn-open">
-          ouvrir le site <i data-lucide="arrow-up-right" class="icon-inline"></i>
+          ouvrir le site <i data-lucide="arrow-up-right" class="icon-s"></i>
         </a>
       </div>
     </div>
@@ -407,20 +519,21 @@
   <!-- MODAL : À propos -->
   <div class="modal-overlay" id="aboutModal">
     <div class="modal-box modal-about">
-      <div class="modal-handle"></div>
       <button class="modal-close" id="closeAbout"><i data-lucide="x"></i></button>
       <div class="about-content">
-        <div class="about-avatar">JL</div>
-        <h2>johan.lambert</h2>
-        <p class="about-bio">Développeur web passionné, je crée des apps, des jeux et des sites web avec soin. J'aime
-          les interfaces propres, les animations subtiles et bref, le dev front !!</p>
+        <div class="about-initials">JL</div>
+        <div class="about-text">
+          <p class="hero-mono" style="font-size:.65rem;letter-spacing:.12em;opacity:.5;margin-bottom:6px">DÉVELOPPEUR WEB</p>
+          <h2 class="about-name">johan.lambert</h2>
+          <p class="about-bio">Développeur web passionné, je crée des apps, des jeux et des sites web avec soin. J'aime les interfaces propres, les animations subtiles et bref, le dev front !!</p>
+        </div>
         <div class="about-skills">
           <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>Git</span>
         </div>
-        <div class="about-icons">
-          <span class="abt-icon"><i data-lucide="zap" class="icon-abt"></i> Rapide</span>
-          <span class="abt-icon"><i data-lucide="palette" class="icon-abt"></i> Créatif</span>
-          <span class="abt-icon"><i data-lucide="smartphone" class="icon-abt"></i> Mobile-first</span>
+        <div class="about-traits">
+          <span><i data-lucide="zap" class="icon-xs"></i> Rapide</span>
+          <span><i data-lucide="palette" class="icon-xs"></i> Créatif</span>
+          <span><i data-lucide="smartphone" class="icon-xs"></i> Mobile-first</span>
         </div>
       </div>
     </div>
@@ -429,9 +542,9 @@
   <!-- MODAL : Contact -->
   <div class="modal-overlay" id="contactModal">
     <div class="modal-box modal-contact">
-      <div class="modal-handle"></div>
       <button class="modal-close" id="closeContact"><i data-lucide="x"></i></button>
-      <h2 class="contact-title">dis bonjour <i data-lucide="hand-metal" class="icon-inline"></i></h2>
+      <p class="hero-mono" style="font-size:.65rem;letter-spacing:.12em;opacity:.5;margin-bottom:12px">CONTACT</p>
+      <h2 class="contact-title">dis<br><em>bonjour.</em></h2>
       <p class="contact-sub">pour un projet, une collab, ou juste pour discuter !</p>
       <div class="contact-items">
         <a href="mailto:johan.lambert.dev@gmail.com" class="contact-item">
@@ -448,5 +561,4 @@
 
   <script src="js/main.js"></script>
 </body>
-
 </html>
